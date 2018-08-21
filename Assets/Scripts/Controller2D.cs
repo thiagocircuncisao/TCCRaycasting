@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof (BoxCollider2D))]
+[RequireComponent(typeof(SubjectController))]
 public class Controller2D : MonoBehaviour {
 	
 	public LayerMask collisionMask;
@@ -19,9 +20,12 @@ public class Controller2D : MonoBehaviour {
 	RaycastOrigins raycastOrigins;
 	public CollisionInfo collisions;
 
+	SubjectController sController;
+
 	// Use this for initialization
 	void Start () {
 		collider = GetComponent<BoxCollider2D> ();
+		sController = GetComponent<SubjectController>();
 		CalculateRaySpacing();
 	}
 
@@ -114,9 +118,10 @@ public class Controller2D : MonoBehaviour {
 				}
 
 				if(hit.collider != null){
-					if(Input.GetKeyDown(KeyCode.E))
-						Debug.Log(hit.collider.name);
-					//Debug.Log(hit.collider.name);
+					if(Input.GetKeyDown(KeyCode.E)){
+						Debug.Log("Cliquei");
+						sController.dialogs(hit);
+					}
 				}
 			}
 		}
