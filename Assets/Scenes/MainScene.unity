@@ -21477,7 +21477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   xMax: 40
   yMax: 8.639323
-  xMin: -8
+  xMin: -6
   yMin: -2
 --- !u!1 &1366855872
 GameObject:
