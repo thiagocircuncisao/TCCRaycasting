@@ -15,7 +15,8 @@ public class Player : MonoBehaviour {
 	float jumpVelocity;
 	Vector3 velocity;
 	float velocityXSmoothing;
-	
+	public bool facingRight = true;
+
 	
 	public Animator animator;
 	//private bool onGround = false;
@@ -35,6 +36,18 @@ public class Player : MonoBehaviour {
 		animator.SetBool("IsJumping", false);
 	}
 
+	private void Flip()
+	{
+		// Switch the way the player is labelled as facing.
+		facingRight = !facingRight;
+
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
+
 	void Update(){
 		if(controller.collisions.above || controller.collisions.below){
 			velocity.y = 0;
@@ -42,6 +55,16 @@ public class Player : MonoBehaviour {
 		}
 		
 		Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+
+		if(input.x > 0 && !facingRight){
+			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			Flip();
+		}
+		
+		else if(input.x < 0 && facingRight){
+			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			Flip();
+		}
 
 		if(Input.GetKeyDown(KeyCode.Space) && controller.collisions.below){
 			velocity.y = jumpVelocity;

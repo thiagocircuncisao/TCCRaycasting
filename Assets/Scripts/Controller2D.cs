@@ -53,15 +53,7 @@ public class Controller2D : MonoBehaviour {
 		if(velocity.y != 0)
 			VerticalCollisions(ref velocity);
 		
-		if(velocity.x > 0 && !facingRight){
-			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
-			Flip();
-		}
 		
-		else if(velocity.x < 0 && facingRight){
-			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
-			Flip();
-		}
 
 		transform.Translate(velocity);
 
