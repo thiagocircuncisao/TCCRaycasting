@@ -66,7 +66,7 @@ public class Player : MonoBehaviour {
 			Flip();
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space) && controller.collisions.below){
+		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && controller.collisions.below){
 			velocity.y = jumpVelocity;
 			animator.SetBool("IsJumping", true);
 			//animator.SetTrigger("Jump");
