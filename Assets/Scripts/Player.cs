@@ -15,9 +15,9 @@ public class Player : MonoBehaviour {
 	float jumpVelocity;
 	Vector3 velocity;
 	float velocityXSmoothing;
-
-	public bool facingRight = true;
-	private Animator animator;
+	
+	
+	public Animator animator;
 	//private bool onGround = false;
 	private Transform groundCheck;
 
@@ -31,14 +31,21 @@ public class Player : MonoBehaviour {
 		jumpVelocity = Mathf.Abs(gravity) * timeToJumpApex;
 	}
 
+	public void OnLanding(){
+		animator.SetBool("IsJumping", false);
+	}
+
 	void Update(){
-		if(controller.collisions.above || controller.collisions.below)
+		if(controller.collisions.above || controller.collisions.below){
 			velocity.y = 0;
+			OnLanding();
+		}
 		
 		Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 		if(Input.GetKeyDown(KeyCode.Space) && controller.collisions.below){
 			velocity.y = jumpVelocity;
+			animator.SetBool("IsJumping", true);
 			//animator.SetTrigger("Jump");
 		}
 		
@@ -49,5 +56,6 @@ public class Player : MonoBehaviour {
 		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirBone);
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move(velocity * Time.deltaTime, animator);
+		animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
 	}
 }

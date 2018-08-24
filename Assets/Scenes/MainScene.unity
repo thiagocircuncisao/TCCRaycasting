@@ -32368,7 +32368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jumpHeight: 4
   timeToJumpApex: 0.4
-  facingRight: 1
+  animator: {fileID: 2027077277}
 --- !u!114 &2027077275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32385,6 +32385,7 @@ MonoBehaviour:
     m_Bits: 512
   horizontalRaycount: 4
   verticalRaycount: 4
+  facingRight: 1
 --- !u!61 &2027077276
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32478,7 +32479,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2027077273}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.05, y: 5.89, z: 0}
+  m_LocalPosition: {x: -6.54, y: -1.9, z: 0}
   m_LocalScale: {x: 0.40289843, y: 0.40289843, z: 0.40289843}
   m_Children: []
   m_Father: {fileID: 0}

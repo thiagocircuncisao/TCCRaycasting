@@ -15,6 +15,7 @@ public class Controller2D : MonoBehaviour {
 	float horizontalRayspacing;
 	float verticalRayspacing;
 	float maxClimbAngle = 80;
+	public bool facingRight = true;
 
 	Collider2D collider;
 	RaycastOrigins raycastOrigins;
@@ -29,6 +30,17 @@ public class Controller2D : MonoBehaviour {
 		CalculateRaySpacing();
 	}
 
+	private void Flip()
+	{
+		// Switch the way the player is labelled as facing.
+		facingRight = !facingRight;
+
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
+	}
+
 	public void Move(Vector3 velocity, Animator animator){
 		UpdateRaycastOrigins();
 
@@ -40,18 +52,19 @@ public class Controller2D : MonoBehaviour {
 		
 		if(velocity.y != 0)
 			VerticalCollisions(ref velocity);
-
-		/*if(velocity.x > 0){
-			//animator.SetBool("Running", false);
-			animator.Play("Running");
+		
+		if(velocity.x > 0 && !facingRight){
+			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			Flip();
 		}
-		if(velocity.x <= 0)
-			//animator.SetBool("Running", true);*/
 		
-
-		
+		else if(velocity.x < 0 && facingRight){
+			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
+			Flip();
+		}
 
 		transform.Translate(velocity);
+
 	}
 
 	void VerticalCollisions(ref Vector3 velocity){
