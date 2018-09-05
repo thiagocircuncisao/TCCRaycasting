@@ -82,6 +82,13 @@ public class Controller2D : MonoBehaviour {
 				collisions.below =  directionY == -1;
 				collisions.above =  directionY == 1;
 			}
+
+			if(hit.collider != null){
+					if(Input.GetKeyDown(KeyCode.E)){
+						Debug.Log("Cliquei");
+						sController.dialogs(hit);
+					}
+			}
 		}
 	}
 
@@ -122,15 +129,18 @@ public class Controller2D : MonoBehaviour {
 					collisions.right =  directionX == 1;
 				}
 
-				if(hit.collider != null){
-					if(Input.GetKeyDown(KeyCode.E)){
-						Debug.Log("Cliquei");
-						sController.dialogs(hit);
-					}
-				}
+				
 			}
 		}
 	}
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(Input.GetKeyDown(KeyCode.E)){
+			Debug.Log("Cliquei");
+		//	sController.dialogs(hit);
+		}
+		Debug.Log("Cliquei");
+    }
 
 	void ClimbSlope(ref Vector3 velocity, float slopeAngle){
 		float moveDistance = Mathf.Abs(velocity.x);

@@ -47,6 +47,15 @@ public class Player : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	void OnTriggerEnter2D(Collider2D other) {
+		if(Input.GetKeyDown(KeyCode.E)){
+			Debug.Log("Cliquei");
+		//	sController.dialogs(hit);
+		}
+		Debug.Log("Cliquei");
+    }
+
+
 
 	void Update(){
 		if(controller.collisions.above || controller.collisions.below){

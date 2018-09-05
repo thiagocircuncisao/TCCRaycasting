@@ -16,27 +16,27 @@ public class SubjectController : MonoBehaviour {
 
 	public void dialogs(RaycastHit2D hit){
 		switch(hit.collider.name){
-			case "CasaMoral":
+			case "SwitchMoral":
 			moral.SetActive(true);
 			conj2.SetActive(true);
 			Debug.Log(hit.collider.name);
 			break;
-			case "CasaPsicologica":
+			case "SwitchPsicologica":
 			psicologica.SetActive(true);
 			conj3.SetActive(true);
 			Debug.Log(hit.collider.name);
 			break;
-			case "CasaPatrimonial":
+			case "SwitchPatrimonial":
 			patrimonial.SetActive(true);
 			conj4.SetActive(true);
 			Debug.Log(hit.collider.name);
 			break;
-			case "CasaFisica":
+			case "SwitchFisica":
 			fisica.SetActive(true);
 			conj5.SetActive(true);
 			Debug.Log(hit.collider.name);
 			break;
-			case "CasaSexual":
+			case "SwitchSexual":
 			sexual.SetActive(true);
 			Debug.Log(hit.collider.name);
 			break;
