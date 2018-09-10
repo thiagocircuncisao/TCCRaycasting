@@ -11,6 +11,10 @@ public class ButtonManager : MonoBehaviour {
 
 	void OnMouseDown () {
    		Debug.Log("Hello");
+  	}
+
+   public void CloseGame(){
+   		Application.Quit();
    }
 
    public void CloseDialog(GameObject dialog){
