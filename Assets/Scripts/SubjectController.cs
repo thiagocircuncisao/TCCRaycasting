@@ -13,8 +13,9 @@ public class SubjectController : MonoBehaviour {
 	public GameObject conj3;
 	public GameObject conj4;
 	public GameObject conj5;
-
+	
 	public void dialogs(RaycastHit2D hit){
+		
 		switch(hit.collider.name){
 			case "SwitchMoral":
 			moral.SetActive(true);

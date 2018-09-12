@@ -20,6 +20,7 @@ public class Controller2D : MonoBehaviour {
 	Collider2D collider;
 	RaycastOrigins raycastOrigins;
 	public CollisionInfo collisions;
+	public static bool inputEnabled = true;
 
 	SubjectController sController;
 
@@ -42,21 +43,19 @@ public class Controller2D : MonoBehaviour {
 	}
 
 	public void Move(Vector3 velocity, Animator animator){
-		UpdateRaycastOrigins();
+		if(inputEnabled){
+			UpdateRaycastOrigins();
 
-		collisions.Reset();
+			collisions.Reset();
 
-		if(velocity.x != 0)
-			HorizontalCollisions(ref velocity);
-		
-		
-		if(velocity.y != 0)
-			VerticalCollisions(ref velocity);
-		
-		
-
-		transform.Translate(velocity);
-
+			if(velocity.x != 0)
+				HorizontalCollisions(ref velocity);
+			
+			if(velocity.y != 0)
+				VerticalCollisions(ref velocity);
+			
+			transform.Translate(velocity);
+		}
 	}
 
 	void VerticalCollisions(ref Vector3 velocity){
@@ -84,7 +83,8 @@ public class Controller2D : MonoBehaviour {
 			}
 
 			if(hit.collider != null){
-					if(Input.GetKeyDown(KeyCode.E)){
+					if(Input.GetKeyDown(KeyCode.E) && inputEnabled){
+						inputEnabled = false;
 						Debug.Log("Cliquei");
 						sController.dialogs(hit);
 					}
