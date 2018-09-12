@@ -42,7 +42,7 @@ public class Controller2D : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	public void Move(Vector3 velocity, Animator animator){
+	public void Move(Vector3 velocity){
 		if(inputEnabled){
 			UpdateRaycastOrigins();
 

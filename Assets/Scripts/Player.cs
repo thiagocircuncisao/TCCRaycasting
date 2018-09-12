@@ -16,7 +16,7 @@ public class Player : MonoBehaviour {
 	Vector3 velocity;
 	float velocityXSmoothing;
 	public bool facingRight = true;
-
+	public AudioSource audio;
 	
 	public Animator animator;
 	//private bool onGround = false;
@@ -47,16 +47,6 @@ public class Player : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	void OnTriggerEnter2D(Collider2D other) {
-		if(Input.GetKeyDown(KeyCode.E)){
-			Debug.Log("Cliquei");
-		//	sController.dialogs(hit);
-		}
-		Debug.Log("Cliquei");
-    }
-
-
-
 	void Update(){
 		if(controller.collisions.above || controller.collisions.below){
 			velocity.y = 0;
@@ -66,28 +56,35 @@ public class Player : MonoBehaviour {
 		Vector2 input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
 		if(input.x > 0 && !facingRight){
-			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			Flip();
 		}
 		
 		else if(input.x < 0 && facingRight){
-			//transform.localScale = new Vector3(-1 * transform.localScale.x, transform.localScale.y, transform.localScale.z);
 			Flip();
 		}
+
+		
+
 
 		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && controller.collisions.below){
 			velocity.y = jumpVelocity;
 			animator.SetBool("IsJumping", true);
-			//animator.SetTrigger("Jump");
 		}
 		
-		//if(controller.collisions.below)
-		//	animator.ResetTrigger("Jump");
 
 		float targetVelocityX = input.x * moveSpeed;
 		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirBone);
 		velocity.y += gravity * Time.deltaTime;
-		controller.Move(velocity * Time.deltaTime, animator);
+		controller.Move(velocity * Time.deltaTime);
 		animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
+
+		if(targetVelocityX > 0 && !audio.loop){
+			audio.Play();
+			audio.loop = true;
+		}
+		else{
+			audio.Stop();
+			audio.loop = false;
+		}
 	}
 }

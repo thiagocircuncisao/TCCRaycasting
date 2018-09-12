@@ -20,4 +20,8 @@ public class ButtonManager : MonoBehaviour {
    		dialog.SetActive(false);
    		Controller2D.inputEnabled = true;
    }
+
+   public void OpenDialog(GameObject dialog){
+   		dialog.SetActive(true);
+   }
 }
