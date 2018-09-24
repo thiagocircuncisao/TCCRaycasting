@@ -16,7 +16,6 @@ public class Player : MonoBehaviour {
 	Vector3 velocity;
 	float velocityXSmoothing;
 	public bool facingRight = true;
-	public AudioSource audio;
 	
 	public Animator animator;
 	//private bool onGround = false;
@@ -77,14 +76,5 @@ public class Player : MonoBehaviour {
 		velocity.y += gravity * Time.deltaTime;
 		controller.Move(velocity * Time.deltaTime);
 		animator.SetFloat("Speed", Mathf.Abs(targetVelocityX));
-
-		if(targetVelocityX > 0 && !audio.loop){
-			audio.Play();
-			audio.loop = true;
-		}
-		else{
-			audio.Stop();
-			audio.loop = false;
-		}
 	}
 }
