@@ -14,14 +14,13 @@ public class Controller2D : MonoBehaviour {
 
 	float horizontalRayspacing;
 	float verticalRayspacing;
-	float maxClimbAngle = 80;
 
 	Collider2D collider;
+	SubjectController sController;
 	RaycastOrigins raycastOrigins;
 	public CollisionInfo collisions;
-	public static bool inputEnabled = true;
 
-	SubjectController sController;
+	public static bool inputEnabled = true;	
 
 	void Start () {
 		collider = GetComponent<BoxCollider2D> ();
@@ -67,7 +66,6 @@ public class Controller2D : MonoBehaviour {
 			if(hit.collider != null){
 					if(Input.GetKeyDown(KeyCode.E) && inputEnabled){
 						inputEnabled = false;
-						Debug.Log("Cliquei");
 						sController.dialogs(hit);
 					}
 			}
