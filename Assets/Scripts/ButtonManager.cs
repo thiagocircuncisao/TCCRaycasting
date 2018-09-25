@@ -8,14 +8,6 @@ public class ButtonManager : MonoBehaviour {
 		SceneManager.LoadScene(newScene);
 	}
 
-	void OnMouseDown () {
-   		Debug.Log("Hello");
-  	}
-
-   public void CloseGame(){
-   		Application.Quit();
-   }
-
    public void CloseDialog(GameObject dialog){
    		dialog.SetActive(false);
    		Controller2D.inputEnabled = true;

@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class SplashScreenController : MonoBehaviour {
 	public Image splashImage;
-	public string loadLevel;
 
 	IEnumerator Start(){
 		splashImage.canvasRenderer.SetAlpha(0.0f);

@@ -18,7 +18,6 @@ public class Player : MonoBehaviour {
 	public bool facingRight = true;
 	
 	public Animator animator;
-	//private bool onGround = false;
 	private Transform groundCheck;
 
 	Controller2D controller;
@@ -35,12 +34,9 @@ public class Player : MonoBehaviour {
 		animator.SetBool("IsJumping", false);
 	}
 
-	private void Flip()
-	{
-		// Switch the way the player is labelled as facing.
+	private void Flip(){
 		facingRight = !facingRight;
 
-		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
@@ -61,9 +57,6 @@ public class Player : MonoBehaviour {
 		else if(input.x < 0 && facingRight){
 			Flip();
 		}
-
-		
-
 
 		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && controller.collisions.below){
 			velocity.y = jumpVelocity;

@@ -20,26 +20,21 @@ public class SubjectController : MonoBehaviour {
 			case "SwitchMoral":
 			moral.SetActive(true);
 			conj2.SetActive(true);
-			Debug.Log(hit.collider.name);
 			break;
 			case "SwitchPsicologica":
 			psicologica.SetActive(true);
 			conj3.SetActive(true);
-			Debug.Log(hit.collider.name);
 			break;
 			case "SwitchPatrimonial":
 			patrimonial.SetActive(true);
 			conj4.SetActive(true);
-			Debug.Log(hit.collider.name);
 			break;
 			case "SwitchFisica":
 			fisica.SetActive(true);
 			conj5.SetActive(true);
-			Debug.Log(hit.collider.name);
 			break;
 			case "SwitchSexual":
 			sexual.SetActive(true);
-			Debug.Log(hit.collider.name);
 			break;
 		}
 	}
