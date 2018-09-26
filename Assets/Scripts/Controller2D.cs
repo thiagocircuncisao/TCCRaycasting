@@ -63,11 +63,15 @@ public class Controller2D : MonoBehaviour {
 				collisions.above =  directionY == 1;
 			}
 
+<<<<<<< HEAD
 			if(hit.collider != null){
 					if(Input.GetKeyDown(KeyCode.E) && inputEnabled){
 						inputEnabled = false;
 						sController.dialogs(hit);
 					}
+=======
+				sController.dialogs(hit);
+>>>>>>> parent of 04753c3... Fixed bugs and add instructions
 			}
 		}
 	}

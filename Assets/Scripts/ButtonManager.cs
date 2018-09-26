@@ -15,5 +15,12 @@ public class ButtonManager : MonoBehaviour {
 
    public void OpenDialog(GameObject dialog){
    		dialog.SetActive(true);
+<<<<<<< HEAD
+=======
+   }
+
+   public void PlaySound(AudioSource audio){
+   		audio.Play();
+>>>>>>> parent of 04753c3... Fixed bugs and add instructions
    }
 }
