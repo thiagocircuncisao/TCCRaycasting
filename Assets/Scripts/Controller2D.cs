@@ -62,7 +62,7 @@ public class Controller2D : MonoBehaviour {
 				collisions.below =  directionY == -1;
 				collisions.above =  directionY == 1;
 
-				sController.dialogs(hit);
+				sController.Dialogs(hit);
 			}
 		}
 	}
