@@ -61,13 +61,8 @@ public class Controller2D : MonoBehaviour {
 
 				collisions.below =  directionY == -1;
 				collisions.above =  directionY == 1;
-			}
 
-			if(hit.collider != null){
-					if(Input.GetKeyDown(KeyCode.E) && inputEnabled){
-						inputEnabled = false;
-						sController.dialogs(hit);
-					}
+				sController.dialogs(hit);
 			}
 		}
 	}
