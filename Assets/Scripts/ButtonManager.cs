@@ -16,8 +16,4 @@ public class ButtonManager : MonoBehaviour {
    public void OpenDialog(GameObject dialog){
    		dialog.SetActive(true);
    }
-
-   public void PlaySound(AudioSource audio){
-   		audio.Play();
-   }
 }
