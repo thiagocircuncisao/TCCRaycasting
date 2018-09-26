@@ -52,17 +52,11 @@ public class MessageInGame : MonoBehaviour {
 
 	private void FadeIn(){
 		message.color = new Color(message.color.r, message.color.g, message.color.b, 0);
-        while (message.color.a < 1.0f)
-        {
-            message.color = new Color(message.color.r, message.color.g, message.color.b, message.color.a + (Time.deltaTime / 0.5f));
-        }
+        
 	}
 
 	private void FadeOut(){
 		message.color = new Color(message.color.r, message.color.g, message.color.b, 1);
-        while (message.color.a > 0.0f)
-        {
-            message.color = new Color(message.color.r, message.color.g, message.color.b, message.color.a - (Time.deltaTime / 0.5f));
-        }
+        
 	}
 }
