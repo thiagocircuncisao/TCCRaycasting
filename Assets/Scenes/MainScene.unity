@@ -4986,7 +4986,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -7264,7 +7264,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5, y: 25}
+  m_AnchoredPosition: {x: 2.5, y: 43.700012}
   m_SizeDelta: {x: 270.7, y: 79.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396404143
@@ -18356,7 +18356,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -18509,7 +18509,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 11
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -18520,12 +18520,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Qualquer conduta que a constranja a presenciar, a manter ou a participar
-    de rela\xE7\xE3o sexual n\xE3o desejada, que a induza a comercializar ou a utilizar,
-    de qualquer modo, a sua sexualidade, que a impe\xE7a de usar qualquer m\xE9todo
-    contraceptivo, que a force ao matrim\xF4nio, \xE0 gravidez, ao aborto ou \xE0
-    prostitui\xE7\xE3o, que limite ou anule o exerc\xEDcio de seus direitos sexuais
-    e reprodutivos"
+  m_Text: "Qualquer conduta que force a participar de rela\xE7\xE3o sexual n\xE3o
+    desejada ou cometer quaisquer tipos de atividades sexuais ou relacionadas ao sexo."
 --- !u!222 &1077130072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22215,8 +22211,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5, y: -45.199997}
-  m_SizeDelta: {x: 356, y: 60.8}
+  m_AnchoredPosition: {x: 2.5, y: -40.01}
+  m_SizeDelta: {x: 356, y: 71.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304212505
 MonoBehaviour:
@@ -22239,7 +22235,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 13
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -23227,7 +23223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000011444, y: -51.255}
+  m_AnchoredPosition: {x: 0.000011444001, y: -39.899986}
   m_SizeDelta: {x: 252, y: 79.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347336852
@@ -25098,8 +25094,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.1, y: 9.175}
-  m_SizeDelta: {x: 247.71, y: 120.25}
+  m_AnchoredPosition: {x: 0.000011444, y: 34.65}
+  m_SizeDelta: {x: 268.56, y: 69.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1441121035
 MonoBehaviour:
@@ -25122,7 +25118,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 11
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -25133,9 +25129,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Qualquer conduta que lhe cause dano emocional, diminui\xE7\xE3o da auto-estima,
-    que lhe prejudique e perturbe o pleno desenvolvimento, que vise degradar ou controlar
-    suas a\xE7\xF5es, comportamentos, cren\xE7as e decis\xF5es;"
+  m_Text: "Qualquer conduta que lhe cause dano emocional, diminui\xE7\xE3o da auto-estima,que
+    vise degradar ou controlar suas a\xE7\xF5es, comportamentos, cren\xE7as e decis\xF5es;"
 --- !u!222 &1441121036
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -26791,7 +26786,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -31256,7 +31251,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -31560,7 +31555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 14.1, y: -67.89407}
+  m_AnchoredPosition: {x: 14.1, y: -48.994}
   m_SizeDelta: {x: 340.67, y: 84.32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1787642384
@@ -31584,7 +31579,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 12
+    m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -31807,7 +31802,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
@@ -32579,7 +32574,7 @@ MonoBehaviour:
     lineCount: 1
     pageCount: 1
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
