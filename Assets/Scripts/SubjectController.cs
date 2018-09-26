@@ -14,7 +14,7 @@ public class SubjectController : MonoBehaviour {
 	public GameObject conj4;
 	public GameObject conj5;
 	
-	public void Dialogs(RaycastHit2D hit){
+	public void dialogs(RaycastHit2D hit){
 		if(Input.GetKeyDown(KeyCode.E) && Controller2D.inputEnabled){
 			switch(hit.collider.name){
 				case "SwitchMoral":
