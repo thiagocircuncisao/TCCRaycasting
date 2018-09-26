@@ -21,6 +21,7 @@ public class Player : MonoBehaviour {
 	private Transform groundCheck;
 
 	Controller2D controller;
+	public AudioSource audio;
 
 	void Start () {
 		controller = GetComponent<Controller2D> ();
@@ -63,6 +64,9 @@ public class Player : MonoBehaviour {
 			animator.SetBool("IsJumping", true);
 		}
 		
+		if(controller.collisions.below && (input.x > 0 || input.x < 0) && !audio.isPlaying){
+			audio.Play();
+		}
 
 		float targetVelocityX = input.x * moveSpeed;
 		velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisions.below) ? accelerationTimeGrounded : accelerationTimeAirBone);

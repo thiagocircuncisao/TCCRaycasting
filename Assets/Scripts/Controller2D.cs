@@ -15,7 +15,7 @@ public class Controller2D : MonoBehaviour {
 	float horizontalRayspacing;
 	float verticalRayspacing;
 
-	Collider2D collider;
+	BoxCollider2D collider;
 	SubjectController sController;
 	RaycastOrigins raycastOrigins;
 	public CollisionInfo collisions;
@@ -23,7 +23,7 @@ public class Controller2D : MonoBehaviour {
 	public static bool inputEnabled = true;	
 
 	void Start () {
-		collider = GetComponent<BoxCollider2D> ();
+		collider = GetComponent<BoxCollider2D>();
 		sController = GetComponent<SubjectController>();
 		CalculateRaySpacing();
 	}
