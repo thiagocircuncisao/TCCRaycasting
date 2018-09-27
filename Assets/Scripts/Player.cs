@@ -59,12 +59,12 @@ public class Player : MonoBehaviour {
 			Flip();
 		}
 
-		if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) && controller.collisions.below){
+		if((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) && controller.collisions.below){
 			velocity.y = jumpVelocity;
 			animator.SetBool("IsJumping", true);
 		}
 		
-		if(controller.collisions.below && (input.x > 0 || input.x < 0) && !audio.isPlaying){
+		if(controller.collisions.below && (input.x > 0 || input.x < 0) && !audio.isPlaying && Controller2D.inputEnabled){
 			audio.Play();
 		}
 

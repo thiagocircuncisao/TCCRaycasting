@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/SplashScreen.unity
     guid: 914d815ee144fb44f9decba5b744fa2d
   - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: c09752ae8778f79439fae8e8acc330f2
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: a94adeb783af8954c9730d4f66224e07
   - enabled: 1
     path: Assets/Scenes/HowToPlay.unity
     guid: b3245bbaa9812ca4a8d509d3d0f5882c
-  - enabled: 1
-    path: Assets/Scenes/Credits.unity
-    guid: c09752ae8778f79439fae8e8acc330f2
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
     guid: 3ff4708608233774290df5c03fc78ad0
