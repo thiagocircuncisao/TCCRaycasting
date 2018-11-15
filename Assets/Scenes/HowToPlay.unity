@@ -756,7 +756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 257, y: 234.63}
+  m_AnchoredPosition: {x: 257, y: -254.86}
   m_SizeDelta: {x: 230.13, y: 43.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1054269152
@@ -965,8 +965,8 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: "O jogo contem 5 casas que s\xE3o desbloqueadas em sequencia.\n\nAo chegar
     em cada casa voc\xEA tera que subir no piso de madeira que estar\xE1 indicado
-    e pressionar a tecla \"E\" para abrir uma janela.\n\nA cada resposta certa voce
-    ir\xE1 desbloquear a proxima casa.\n\nSetas do teclado para andar e pular\n\"E\"
+    e pressionar a tecla \"E\" para abrir uma janela.\n\nA cada resposta certa voc\xEA
+    ir\xE1 desbloquear a pr\xF3xima casa.\n\nSetas do teclado para andar e pular\n\"E\"
     para abrir a janela"
 --- !u!222 &1350501970
 CanvasRenderer:
